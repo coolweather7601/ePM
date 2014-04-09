@@ -1,0 +1,16 @@
+C:\Users\nxp66187\Documents\Visual Studio 2005\Projects\ePM_weekly_Scan\ePM_weekly_Scan\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\nxp66187\Documents\Visual Studio 2005\Projects\ePM_weekly_Scan\ePM_weekly_Scan\bin\Debug\ePM_weekly_Scan.exe.config
+C:\Users\nxp66187\Documents\Visual Studio 2005\Projects\ePM_weekly_Scan\ePM_weekly_Scan\bin\Debug\ePM_weekly_Scan.exe
+C:\Users\nxp66187\Documents\Visual Studio 2005\Projects\ePM_weekly_Scan\ePM_weekly_Scan\bin\Debug\ePM_weekly_Scan.pdb
+C:\Users\nxp66187\Documents\Visual Studio 2005\Projects\ePM_weekly_Scan\ePM_weekly_Scan\obj\Debug\ePM_weekly_Scan.exe
+C:\Users\nxp66187\Documents\Visual Studio 2005\Projects\ePM_weekly_Scan\ePM_weekly_Scan\obj\Debug\ePM_weekly_Scan.pdb
+C:\Users\nxp66187\Documents\Visual Studio 2005\Projects\ePM_weekly_Scan\ePM_weekly_Scan\bin\x86\Debug\ePM_weekly_Scan.exe.config
+C:\Users\nxp66187\Documents\Visual Studio 2005\Projects\ePM_weekly_Scan\ePM_weekly_Scan\bin\x86\Debug\ePM_weekly_Scan.exe
+C:\Users\nxp66187\Documents\Visual Studio 2005\Projects\ePM_weekly_Scan\ePM_weekly_Scan\bin\x86\Debug\ePM_weekly_Scan.pdb
+C:\Users\nxp66187\Documents\Visual Studio 2005\Projects\ePM_weekly_Scan\ePM_weekly_Scan\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\nxp66187\Documents\Visual Studio 2005\Projects\ePM_weekly_Scan\ePM_weekly_Scan\obj\x86\Debug\ePM_weekly_Scan.exe
+C:\Users\nxp66187\Documents\Visual Studio 2005\Projects\ePM_weekly_Scan\ePM_weekly_Scan\obj\x86\Debug\ePM_weekly_Scan.pdb
+C:\Users\nxp66187\Documents\Visual Studio 2005\Projects\ePM_weekly_Scan\ePM_weekly_Scan\bin\Debug\ePM_weekly_Scan.exe.manifest
+C:\Users\nxp66187\Documents\Visual Studio 2005\Projects\ePM_weekly_Scan\ePM_weekly_Scan\bin\Debug\ePM_weekly_Scan.application
+C:\Users\nxp66187\Documents\Visual Studio 2005\Projects\ePM_weekly_Scan\ePM_weekly_Scan\obj\Debug\ePM_weekly_Scan.exe.manifest
+C:\Users\nxp66187\Documents\Visual Studio 2005\Projects\ePM_weekly_Scan\ePM_weekly_Scan\obj\Debug\ePM_weekly_Scan.application

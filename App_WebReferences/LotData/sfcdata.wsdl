@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://nxp.com/EWFC/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://nxp.com/EWFC/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://nxp.com/EWFC/">
+      <s:element name="getBatchNoList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="diffusionLotNr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getBatchNoListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getBatchNoListResult" type="tns:BatchNoListProxy" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BatchNoListProxy">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DiffusionLotID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BatchNoList" type="tns:ArrayOfString" />
+          <s:element minOccurs="1" maxOccurs="1" name="ErrorNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorDescription" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getVersion">
+        <s:complexType />
+      </s:element>
+      <s:element name="getVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getVersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCompleteLotData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transportLotID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCompleteLotDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCompleteLotDataResult" type="tns:CompleteLotDataProxy" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CompleteLotDataProxy">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DiffusionIdList" type="tns:ArrayOfDiffusionIDProxy" />
+          <s:element minOccurs="0" maxOccurs="1" name="Shoporder" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Duedate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GenerateDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Holdreasoncode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Holdstatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Materialname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ordertype" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Waferbatch" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Wafer2batch" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Wafer3batch" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Wafer4batch" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastComment" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastComment2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastComment3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lotid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NextOperationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Operationname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RouteName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Startedqty" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Queuedqty" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Udasecondaryqty" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WorkState" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Udastartedsecondaryqty" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BusinessLineName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiePerWafer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DieSizeX" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DieSizeY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WaferFabCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WaferFabName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WaferLayoutVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cept12NC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BaseTypeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WaferSize" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Product" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WaferTestProgramName1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WaferTestProgramName2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WaferTestProgramName3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Pep12NC" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ErrorNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DieLayoutVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VariationTypeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RomCodeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lmo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocalTypeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Package" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DieDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Die2Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Die3Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Die4Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DieCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LineType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DevelopmentCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiffusionProcess" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemGroup" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProberFile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WaferBatchAmount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataSourceName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FabDiffusion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FinishedProductDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MarkingType1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PackageOutline" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AssemblyCG" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DateCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WaferThickness" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Icft12NC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SLBU12NC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PackageOutlineVersion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDiffusionIDProxy">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DiffusionIDProxy" nillable="true" type="tns:DiffusionIDProxy" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DiffusionIDProxy">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DiffusionID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="autoHold">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_waferBatch" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_operationName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_reasonCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_comment" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="autoHoldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="autoHoldResult" type="tns:FutureStopProxy" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="FutureStopProxy">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TransportLotID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HoldStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastComment" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HoldReasonCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastComment2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastComment3" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ErrorNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorDescription" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="futureHold">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_waferBatch" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_operationName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_reasonCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_comment" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="futureHoldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="futureHoldResult" type="tns:FutureStopProxy" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BatchNoListProxy" nillable="true" type="tns:BatchNoListProxy" />
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="CompleteLotDataProxy" nillable="true" type="tns:CompleteLotDataProxy" />
+      <s:element name="FutureStopProxy" nillable="true" type="tns:FutureStopProxy" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getBatchNoListSoapIn">
+    <wsdl:part name="parameters" element="tns:getBatchNoList" />
+  </wsdl:message>
+  <wsdl:message name="getBatchNoListSoapOut">
+    <wsdl:part name="parameters" element="tns:getBatchNoListResponse" />
+  </wsdl:message>
+  <wsdl:message name="getVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:getVersion" />
+  </wsdl:message>
+  <wsdl:message name="getVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:getVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCompleteLotDataSoapIn">
+    <wsdl:part name="parameters" element="tns:getCompleteLotData" />
+  </wsdl:message>
+  <wsdl:message name="getCompleteLotDataSoapOut">
+    <wsdl:part name="parameters" element="tns:getCompleteLotDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="autoHoldSoapIn">
+    <wsdl:part name="parameters" element="tns:autoHold" />
+  </wsdl:message>
+  <wsdl:message name="autoHoldSoapOut">
+    <wsdl:part name="parameters" element="tns:autoHoldResponse" />
+  </wsdl:message>
+  <wsdl:message name="futureHoldSoapIn">
+    <wsdl:part name="parameters" element="tns:futureHold" />
+  </wsdl:message>
+  <wsdl:message name="futureHoldSoapOut">
+    <wsdl:part name="parameters" element="tns:futureHoldResponse" />
+  </wsdl:message>
+  <wsdl:message name="getBatchNoListHttpGetIn">
+    <wsdl:part name="diffusionLotNr" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getBatchNoListHttpGetOut">
+    <wsdl:part name="Body" element="tns:BatchNoListProxy" />
+  </wsdl:message>
+  <wsdl:message name="getVersionHttpGetIn" />
+  <wsdl:message name="getVersionHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getCompleteLotDataHttpGetIn">
+    <wsdl:part name="transportLotID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getCompleteLotDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:CompleteLotDataProxy" />
+  </wsdl:message>
+  <wsdl:message name="autoHoldHttpGetIn">
+    <wsdl:part name="_waferBatch" type="s:string" />
+    <wsdl:part name="_operationName" type="s:string" />
+    <wsdl:part name="_reasonCode" type="s:string" />
+    <wsdl:part name="_comment" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="autoHoldHttpGetOut">
+    <wsdl:part name="Body" element="tns:FutureStopProxy" />
+  </wsdl:message>
+  <wsdl:message name="futureHoldHttpGetIn">
+    <wsdl:part name="_waferBatch" type="s:string" />
+    <wsdl:part name="_operationName" type="s:string" />
+    <wsdl:part name="_reasonCode" type="s:string" />
+    <wsdl:part name="_comment" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="futureHoldHttpGetOut">
+    <wsdl:part name="Body" element="tns:FutureStopProxy" />
+  </wsdl:message>
+  <wsdl:message name="getBatchNoListHttpPostIn">
+    <wsdl:part name="diffusionLotNr" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getBatchNoListHttpPostOut">
+    <wsdl:part name="Body" element="tns:BatchNoListProxy" />
+  </wsdl:message>
+  <wsdl:message name="getVersionHttpPostIn" />
+  <wsdl:message name="getVersionHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getCompleteLotDataHttpPostIn">
+    <wsdl:part name="transportLotID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getCompleteLotDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:CompleteLotDataProxy" />
+  </wsdl:message>
+  <wsdl:message name="autoHoldHttpPostIn">
+    <wsdl:part name="_waferBatch" type="s:string" />
+    <wsdl:part name="_operationName" type="s:string" />
+    <wsdl:part name="_reasonCode" type="s:string" />
+    <wsdl:part name="_comment" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="autoHoldHttpPostOut">
+    <wsdl:part name="Body" element="tns:FutureStopProxy" />
+  </wsdl:message>
+  <wsdl:message name="futureHoldHttpPostIn">
+    <wsdl:part name="_waferBatch" type="s:string" />
+    <wsdl:part name="_operationName" type="s:string" />
+    <wsdl:part name="_reasonCode" type="s:string" />
+    <wsdl:part name="_comment" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="futureHoldHttpPostOut">
+    <wsdl:part name="Body" element="tns:FutureStopProxy" />
+  </wsdl:message>
+  <wsdl:portType name="SFCDataSoap">
+    <wsdl:operation name="getBatchNoList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method to get a list of batch card nr.</wsdl:documentation>
+      <wsdl:input message="tns:getBatchNoListSoapIn" />
+      <wsdl:output message="tns:getBatchNoListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getVersion">
+      <wsdl:input message="tns:getVersionSoapIn" />
+      <wsdl:output message="tns:getVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCompleteLotData">
+      <wsdl:input message="tns:getCompleteLotDataSoapIn" />
+      <wsdl:output message="tns:getCompleteLotDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="autoHold">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method perform Intrack auto hold.</wsdl:documentation>
+      <wsdl:input message="tns:autoHoldSoapIn" />
+      <wsdl:output message="tns:autoHoldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="futureHold">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method perform Intrack future hold.</wsdl:documentation>
+      <wsdl:input message="tns:futureHoldSoapIn" />
+      <wsdl:output message="tns:futureHoldSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SFCDataHttpGet">
+    <wsdl:operation name="getBatchNoList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method to get a list of batch card nr.</wsdl:documentation>
+      <wsdl:input message="tns:getBatchNoListHttpGetIn" />
+      <wsdl:output message="tns:getBatchNoListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getVersion">
+      <wsdl:input message="tns:getVersionHttpGetIn" />
+      <wsdl:output message="tns:getVersionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCompleteLotData">
+      <wsdl:input message="tns:getCompleteLotDataHttpGetIn" />
+      <wsdl:output message="tns:getCompleteLotDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="autoHold">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method perform Intrack auto hold.</wsdl:documentation>
+      <wsdl:input message="tns:autoHoldHttpGetIn" />
+      <wsdl:output message="tns:autoHoldHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="futureHold">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method perform Intrack future hold.</wsdl:documentation>
+      <wsdl:input message="tns:futureHoldHttpGetIn" />
+      <wsdl:output message="tns:futureHoldHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SFCDataHttpPost">
+    <wsdl:operation name="getBatchNoList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method to get a list of batch card nr.</wsdl:documentation>
+      <wsdl:input message="tns:getBatchNoListHttpPostIn" />
+      <wsdl:output message="tns:getBatchNoListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getVersion">
+      <wsdl:input message="tns:getVersionHttpPostIn" />
+      <wsdl:output message="tns:getVersionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCompleteLotData">
+      <wsdl:input message="tns:getCompleteLotDataHttpPostIn" />
+      <wsdl:output message="tns:getCompleteLotDataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="autoHold">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method perform Intrack auto hold.</wsdl:documentation>
+      <wsdl:input message="tns:autoHoldHttpPostIn" />
+      <wsdl:output message="tns:autoHoldHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="futureHold">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method perform Intrack future hold.</wsdl:documentation>
+      <wsdl:input message="tns:futureHoldHttpPostIn" />
+      <wsdl:output message="tns:futureHoldHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SFCDataSoap" type="tns:SFCDataSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getBatchNoList">
+      <soap:operation soapAction="http://nxp.com/EWFC/getBatchNoList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVersion">
+      <soap:operation soapAction="http://nxp.com/EWFC/getVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCompleteLotData">
+      <soap:operation soapAction="http://nxp.com/EWFC/getCompleteLotData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="autoHold">
+      <soap:operation soapAction="http://nxp.com/EWFC/autoHold" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="futureHold">
+      <soap:operation soapAction="http://nxp.com/EWFC/futureHold" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SFCDataSoap12" type="tns:SFCDataSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getBatchNoList">
+      <soap12:operation soapAction="http://nxp.com/EWFC/getBatchNoList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVersion">
+      <soap12:operation soapAction="http://nxp.com/EWFC/getVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCompleteLotData">
+      <soap12:operation soapAction="http://nxp.com/EWFC/getCompleteLotData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="autoHold">
+      <soap12:operation soapAction="http://nxp.com/EWFC/autoHold" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="futureHold">
+      <soap12:operation soapAction="http://nxp.com/EWFC/futureHold" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SFCDataHttpGet" type="tns:SFCDataHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="getBatchNoList">
+      <http:operation location="/getBatchNoList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVersion">
+      <http:operation location="/getVersion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCompleteLotData">
+      <http:operation location="/getCompleteLotData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="autoHold">
+      <http:operation location="/autoHold" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="futureHold">
+      <http:operation location="/futureHold" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SFCDataHttpPost" type="tns:SFCDataHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="getBatchNoList">
+      <http:operation location="/getBatchNoList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVersion">
+      <http:operation location="/getVersion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCompleteLotData">
+      <http:operation location="/getCompleteLotData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="autoHold">
+      <http:operation location="/autoHold" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="futureHold">
+      <http:operation location="/futureHold" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SFCData">
+    <wsdl:port name="SFCDataSoap" binding="tns:SFCDataSoap">
+      <soap:address location="http://apkbl008/ewfm2/sfcdata.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SFCDataSoap12" binding="tns:SFCDataSoap12">
+      <soap12:address location="http://apkbl008/ewfm2/sfcdata.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SFCDataHttpGet" binding="tns:SFCDataHttpGet">
+      <http:address location="http://apkbl008/ewfm2/sfcdata.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SFCDataHttpPost" binding="tns:SFCDataHttpPost">
+      <http:address location="http://apkbl008/ewfm2/sfcdata.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

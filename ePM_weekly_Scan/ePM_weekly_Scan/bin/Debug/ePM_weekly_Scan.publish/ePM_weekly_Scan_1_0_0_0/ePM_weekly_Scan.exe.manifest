@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asmv1:assemblyIdentity name="ePM_weekly_Scan.exe" version="1.0.0.0" publicKeyToken="98e925e1e522dbc4" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="ePM_weekly_Scan" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="ePM_weekly_Scan.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="4" minorVersion="10" buildNumber="0" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ePM_weekly_Scan.exe" size="28672">
+      <assemblyIdentity name="ePM_weekly_Scan" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>M/OL87l76SgpK/IUSvmgdzyK9jI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="ePM_weekly_Scan.exe.config" size="506">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>mzBTGo5whuDHF5nf130j8VJ53/g=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=WBI\nxp66187" issuerKeyHash="e1abef64aaf0cdf983afd65e07c4b74a61bfcd67" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>dRo8pxIaZo/tpSin+/hBJV1lFNI=</DigestValue></Reference></SignedInfo><SignatureValue>f6G/Epu1UdC1jXINQiKM7BTZOSCDY0GVXa2s4ix+aPiwubduzqfWD87LUbCAND0acz/Kb6rR3Y9ATPw5cxy9WI3uSQZT/Qb1+UQbdk2mK6kWiWD+a+tynHVy3l7Gyt/2obw5vj3O6qOLIj/Lbnuez/EAYzBsCHYG0b+4xk8DGQk=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>szyQed/9aWPhAALzaAzoWzvQ22DkwgfKXXxISY+P3cM2bhLHFyjfHf7N8ukK03U5jaEztcz3z6fWbVG5g66FXWV0DNQd5qsvS7eL7Ty4ghl1xu7FKRgACrL1G8Mg1FeaPYjS/NrDlvj/jdRNv+ca3VpTSA8MYCsvs3KqxsuUO80=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="d214655d2541f8fba728a5ed8f661a12a73c1a75" Description="" Url=""><as:assemblyIdentity name="ePM_weekly_Scan.exe" version="1.0.0.0" publicKeyToken="98e925e1e522dbc4" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=WBI\nxp66187</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>J31I2gg5vgIETHAd/q374BVJF6c=</DigestValue></Reference></SignedInfo><SignatureValue>o0k5boMBOCu8CL4iVXAtLGfH3pjfy2P0vC+fnGO96KFrn9yfVfEiE5czLakB8ZBDoKQXYQptbafXsVLb4OQjOZIXpvav0OAL2EsiyzVHpuK71ymipdOfMgXKqJmSm83bVimJ7zqdJD/JKollNrchhyZkoL6865jjajr8VIl4/20=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>szyQed/9aWPhAALzaAzoWzvQ22DkwgfKXXxISY+P3cM2bhLHFyjfHf7N8ukK03U5jaEztcz3z6fWbVG5g66FXWV0DNQd5qsvS7eL7Ty4ghl1xu7FKRgACrL1G8Mg1FeaPYjS/NrDlvj/jdRNv+ca3VpTSA8MYCsvs3KqxsuUO80=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIByTCCATKgAwIBAgIQEblxqEgf67RNZPTFv1MhyzANBgkqhkiG9w0BAQUFADAjMSEwHwYDVQQDHhgAVwBCAEkAXABuAHgAcAA2ADYAMQA4ADcwHhcNMTMxMDE4MDcwMDQ2WhcNMTQxMDE4MTMwMDQ2WjAjMSEwHwYDVQQDHhgAVwBCAEkAXABuAHgAcAA2ADYAMQA4ADcwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALM8kHnf/Wlj4QAC82gM6Fs70Ntg5MIHyl18SEmPj93DNm4Sxxco3x3+zfLpCtN1OY2hM7XM98+n1m1RuYOuhV1ldAzUHearL0u3i+08uIIZdcbuxSkYAAqy9RvDINRXmj2I0vzaw5b4/43UTb/nGt1aU0gPDGArL7NyqsbLlDvNAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEADlzg6zcMN6EusMyoEp+EXEKnwEvQ3jdfKVfYhoEJDpZ+VoaDR2jTi5WDl9FE2YchdE3shF/04NI5Gp6hR0gXXbrAygENce5x2CzphIZBuyNz6H0q6qargKYNIObo40hxM2x3sa5N6KPBKnCpVD06Nc4mNEk/2uXslz+OVii1SNk=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

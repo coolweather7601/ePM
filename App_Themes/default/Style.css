@@ -1,0 +1,77 @@
+﻿BODY
+{ 
+}
+
+BODY.BODY_MENU
+{
+        background-color:#EE5B94;
+        background:#EE5B94;
+        }
+
+BODY.BODY_LOGIN
+{
+        background:#FFFFFF url('../img/login_background.gif');
+        margin:0px; padding:0px;
+}
+
+FORM {margin: 0px; padding: 0px;}
+
+
+a.A_Tab:link {color:#000000; text-decoration: none; }
+a.A_Tab:active {color:#000000; text-decoration: none; }
+a.A_Tab:visited {color:#000000; text-decoration: none; }
+a.A_Tab:hover {color: #000000; text-decoration: underline; }
+
+a.A_Menu:link {color:#000000; text-decoration: none; }
+a.A_Menu:active {color:#000000; text-decoration: none; }
+a.A_Menu:visited {color:#000000; text-decoration: none; }
+a.A_Menu:hover {color: #000000; text-decoration: underline; }
+
+a.A_MenuWhite:link {color:#ffffff; text-decoration: none; }
+a.A_MenuWhite:active {color:#ffffff; text-decoration: none; }
+a.A_MenuWhite:visited {color:#ffffff; text-decoration: none; }
+a.A_MenuWhite:hover {color: #ffffff; text-decoration: underline; }
+
+a.A_NewMenu:link {color:#003059; text-decoration: none; }
+a.A_NewMenu:active {color:#003059; text-decoration: none; }
+a.A_NewMenu:visited {color:#003059; text-decoration: none; }
+a.A_NewMenu:hover {color: #003059; text-decoration: none; }
+
+a.A_NewMenuOn:link {color:#ffffff; text-decoration: none; }
+a.A_NewMenuOn:active {color:#ffffff; text-decoration: none; }
+a.A_NewMenuOn:visited {color:#ffffff; text-decoration: none; }
+a.A_NewMenuOn:hover {color: #ffffff; text-decoration: none; }
+
+SELECT { color:#000000; background-color:#FFFFFF; font-size:11px; font-family:verdana, Arial, Helvetica; }
+TEXTAREA { font-size:11px; font-family: verdana;border: 1px solid #AFC2CC}
+
+
+TABLE.Mtable TD {border-bottom:1px solid #9AA1B1}
+.inPgBrdr {border:solid #8CA5B5 1px}
+.smcRow {border-top:solid #C1CDD8 1px}
+.msglistcntrl TD {border-bottom:none}
+.tagline{FONT-SIZE: 10pt; color:#00CCCC;text-decoration:none}
+
+.desc_cell {border-bottom: 1px #ffffff solid;font-size:11px; font-family: arial; color: #002D45; background: #DCE5EA; padding: 2px 5px 2px 5px;}
+.desc_cell_bms {border-bottom: 1px #ffffff solid;font-size:10pt; font-family: arial; color: #A0522D; background: #F0E68C; padding: 2px 5px 2px 5px;}
+.ColumnFONT {FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #000000; FONT-FAMILY: Arial, Tahoma, Verdana, Helvetica}
+.SubColumnFONT {FONT-SIZE: 8pt; COLOR: blue; FONT-FAMILY: Arial, Tahoma, Verdana, Helvetica}
+.DataFONT {FONT-SIZE: 8pt; COLOR: #000000; FONT-FAMILY: Arial, Tahoma, Verdana, Helvetica}
+.DataFONTlightyellow{FONT-SIZE: 8pt; COLOR:#000000;background:#ffffd2; FONT-FAMILY: Arial, Tahoma, Verdana, Helvetica;}
+.DataFONTlightgreen {FONT-SIZE: 8pt; COLOR:#000000;background:#e7ffe7; FONT-FAMILY: Arial, Tahoma, Verdana, Helvetica;}
+.ErrFONT {FONT-SIZE: 9pt; COLOR: #000000; FONT-FAMILY: Arial, Tahoma, Verdana, Helvetica}
+.DataTD {background: #ffffff; padding: 1px 5px 1px 5px; border: 1px #C6D2DE solid; border-left: 1px #C6D2DE dotted; border-right: 1px #C6D2DE dotted; }
+.DataTDRed {background: #ffffff; padding: 1px 5px 1px 5px; border: 1px #FFD2DE solid; border-left: 1px #FFD2DE dotted; border-right: 1px #FFD2DE dotted; }
+.DataTDGrey {padding: 1px 5px 1px 5px; border: 1px #C6D2DE solid; border-left: 1px #C6D2DE dotted; border-right: 1px #C6D2DE dotted; }
+.group_title {font-size:12px; font-weight: bold; font-family: arial; color: #14426B;padding: 2px 5px 2px 5px;}
+.group_bar {background: #DCE5EA; empty-cells: show}
+.autocomplete_completionListElement {visibility : hidden;margin : 0px!important;background-color : inherit;color : windowtext;	border : buttonshadow;border-width : 1px;border-style : solid;cursor : 'default';overflow : auto;height : 200px;text-align : right;list-style-type : none;}
+.autocomplete_highlightedListItem {background-color: #ffff99;color: black;padding: 1px;}
+.autocomplete_listItem {background-color : window;color : windowtext;padding : 1px;}
+#rtm table { background: #f5f5f5; border-right: #7f9db9 1px solid; border-top: #7f9db9 1px solid; border-left: #7f9db9 1px solid; border-bottom: #7f9db9 1px solid;}
+#rtm .rtm_th { font-family: Trebuchet MS, Arial; font-size: 12pt; color: Navy; font-weight: bold;}
+#rtm td { font-family: Trebuchet MS, Arial; font-size: 10pt; margin: 3px; padding: 3px; vertical-align: top; }
+#rtm .optional_td { color: gray}
+#rtm .note_td { color: #1e90ff; font-size: 9pt;}
+#rtm input {font-family: Trebuchet MS, Arial;}
+.menu_bar { background-image: url(http://twgkhhpsk1ms011.tw-khh01.nxp.com/incom/img/bg_snmiddle.gif); }

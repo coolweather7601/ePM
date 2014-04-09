@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+  </configSections>
+  <connectionStrings>
+    <add name="ePM_weekly_Scan.Properties.Settings.Mail" connectionString="Data Source=MAIL;Persist Security Info=True;User ID=autotrs;Password=autotrs;Unicode=True" />
+    <add name="ePM_weekly_Scan.Properties.Settings.EPM" connectionString="User Id=EPM_SYS;Password=Epm!!;Data Source=AUTO"
+      providerName="System.Data.OracleClient" />
+  </connectionStrings>
+</configuration>

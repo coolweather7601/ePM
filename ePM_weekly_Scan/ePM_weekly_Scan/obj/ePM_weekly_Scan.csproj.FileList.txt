@@ -1,0 +1,11 @@
+bin\Debug\ePM_weekly_Scan.exe.config
+obj\Debug\ePM_weekly_Scan.exe
+obj\Debug\ePM_weekly_Scan.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\ePM_weekly_Scan.csproj.ResolveComReference.cache
+bin\Debug\ePM_weekly_Scan.exe.manifest
+bin\Debug\ePM_weekly_Scan.application
+bin\Debug\ePM_weekly_Scan.exe
+bin\Debug\ePM_weekly_Scan.pdb
+obj\Debug\ePM_weekly_Scan.exe.manifest
+obj\Debug\ePM_weekly_Scan.application

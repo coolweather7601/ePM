@@ -1,0 +1,103 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<%@ Register Assembly="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+    Namespace="System.Web.UI" TagPrefix="asp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Master Page</title>
+    
+<script type="text/javascript" src="~/js/jquery-1.10.0.js"></script>
+
+<link rel="stylesheet" href="../../css/sheet.css" type="text/css" />
+<!--NewLook-->
+<link rel="stylesheet" href="http://twgkhhpsk1ms011.tw-khh01.nxp.com/incom/css/style.css" type="text/css" />
+<link rel="stylesheet" href="~/App_Themes/default/Style.css" type="text/css" />
+<script src="http://twgkhhpsk1ms011.tw-khh01.nxp.com/incom/js/lib.js" type="text/javascript"></script>
+<script src="http://twgkhhpsk1ms011.tw-khh01.nxp.com/incom/js/display.js" type="text/javascript"></script>
+<script src="../../NewLook/EPM_menu.js" type="text/javascript"></script>
+<!--NewLook-->
+
+<script type="text/javascript">
+function moldShiftFocus(obj){
+    obj.value='';
+    obj.style.color = 'black';
+}
+
+//防止在Text按下Enter時會呼叫到button submit
+function preventTextEnterEvent() {
+    //Browser differences: Internet Explorer uses event.keyCode to retrieve the character that was pressed and Netscape/Firefox/Opera uses event.which. 
+    if ((event.which && event.which == 13) || (event.keyCode && event.keyCode == 13)) {
+        //不作任何事情
+        event.returnValue = false;
+        event.cancel = true;
+        return false;
+    }
+    return true;
+}
+</script>
+
+
+<style type="text/css">
+A:link
+{
+ text-decoration: none;
+ color: #3333cc;
+}
+
+A:visited
+{
+ text-decoration: none;
+ color: #333399;
+}
+
+A:active
+{
+ text-decoration: underline;
+ color: #333399;
+}
+
+A:hover
+{
+ text-decoration: underline;
+ color: red;
+}
+
+#contentTable td{
+    vertical-align:middle; text-align:left;
+}
+
+.input-date{
+    width:200px;
+}
+ </style>   
+
+          
+</head>
+<body>
+    <script type="text/javascript">_page.startPage("0")</script>
+    
+    <form id="form1" runat="server">
+    <div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+            
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server"> 
+            <table style="position:relative; left:85%;"> 
+                <tr>
+                    <td colspan="2" style="text-align:right;"><asp:Label ID="lblName" runat="server" Text="Label"></asp:Label></td>
+                </tr> 
+                <tr>
+                    <td><asp:Button ID="btnRole" runat="server" Text="Role Manage" CssClass="btn btn-info" Visible="false" OnClick="btnRole_Click" /></td>
+                    <td><asp:Button ID="btnLogout" runat="server" Text="Log Out" OnClick="btnLogout_Click" CssClass="btn btn-inverse" /></td>
+                </tr>   
+            </table>
+        </asp:contentplaceholder>
+        
+        <asp:contentplaceholder id="ContentPlaceHolder2" runat="server">            
+        </asp:contentplaceholder>
+    </div>
+    </form>
+    <script type="text/javascript">_page.endPage()</script>
+</body>
+</html>
