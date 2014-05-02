@@ -23,7 +23,7 @@ namespace EPM.Alan.Common
                     command.CommandText = "select seq_mail_id.nextval from dual";
                     int mail_id = Convert.ToInt32(command.ExecuteScalar());
                     command.CommandText = "insert into mail_pool (id,from_name,disable,datetime_in,send_period,mail_to,mail_cc,mail_subject,datetime_exp,exclusive_flag,check_sum,html_body) " +
-                    "values (" + mail_id + ",'eStartupCheck mail agent',0,sysdate,0,'" + contact + "',null,'" + title + "',sysdate+1,0,null,1)";
+                    "values (" + mail_id + ",'ePM mail agent',0,sysdate,0,'" + contact + "',null,'" + title + "',sysdate+1,0,null,1)";
                     command.ExecuteNonQuery();
 
                     command.CommandText = "insert into mail_body (id,sn,mail_cont) values (" + mail_id + ",1,'" + mail_data + "')";

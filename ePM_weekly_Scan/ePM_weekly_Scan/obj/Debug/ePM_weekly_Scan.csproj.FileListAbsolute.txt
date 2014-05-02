@@ -9,3 +9,16 @@ C:\Users\nxp66187\Documents\AlanKuo\SVN_checkout\ePM_weekly_Scan\ePM_weekly_Scan
 C:\Users\nxp66187\Documents\AlanKuo\SVN_checkout\ePM_weekly_Scan\ePM_weekly_Scan\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\nxp66187\Documents\AlanKuo\SVN_checkout\ePM_weekly_Scan\ePM_weekly_Scan\obj\Debug\ePM_weekly_Scan.exe.manifest
 C:\Users\nxp66187\Documents\AlanKuo\SVN_checkout\ePM_weekly_Scan\ePM_weekly_Scan\obj\Debug\ePM_weekly_Scan.application
+C:\Users\nxp66187\Documents\AlanKuo\program\ePM\ePM_weekly_Scan\ePM_weekly_Scan\obj\Debug\ePM_weekly_Scan.exe
+C:\Users\nxp66187\Documents\AlanKuo\program\ePM\ePM_weekly_Scan\ePM_weekly_Scan\obj\Debug\ePM_weekly_Scan.pdb
+C:\Users\nxp66187\Documents\AlanKuo\program\ePM\ePM_weekly_Scan\ePM_weekly_Scan\bin\Debug\ePM_weekly_Scan.exe.config
+C:\Users\nxp66187\Documents\AlanKuo\program\ePM\ePM_weekly_Scan\ePM_weekly_Scan\bin\Debug\ePM_weekly_Scan.exe.manifest
+C:\Users\nxp66187\Documents\AlanKuo\program\ePM\ePM_weekly_Scan\ePM_weekly_Scan\bin\Debug\ePM_weekly_Scan.application
+C:\Users\nxp66187\Documents\AlanKuo\program\ePM\ePM_weekly_Scan\ePM_weekly_Scan\bin\Debug\ePM_weekly_Scan.exe
+C:\Users\nxp66187\Documents\AlanKuo\program\ePM\ePM_weekly_Scan\ePM_weekly_Scan\bin\Debug\ePM_weekly_Scan.pdb
+C:\Users\nxp66187\Documents\AlanKuo\program\ePM\ePM_weekly_Scan\ePM_weekly_Scan\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\Users\nxp66187\Documents\AlanKuo\program\ePM\ePM_weekly_Scan\ePM_weekly_Scan\bin\Debug\Interop.AwkOneLib.dll
+C:\Users\nxp66187\Documents\AlanKuo\program\ePM\ePM_weekly_Scan\ePM_weekly_Scan\obj\Debug\Interop.AwkOneLib.dll
+C:\Users\nxp66187\Documents\AlanKuo\program\ePM\ePM_weekly_Scan\ePM_weekly_Scan\obj\Debug\ePM_weekly_Scan.csproj.ResolveComReference.cache
+C:\Users\nxp66187\Documents\AlanKuo\program\ePM\ePM_weekly_Scan\ePM_weekly_Scan\obj\Debug\ePM_weekly_Scan.exe.manifest
+C:\Users\nxp66187\Documents\AlanKuo\program\ePM\ePM_weekly_Scan\ePM_weekly_Scan\obj\Debug\ePM_weekly_Scan.application

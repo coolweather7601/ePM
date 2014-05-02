@@ -5,10 +5,10 @@
     <Setting Name="EPM" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;User Id=EPM_SYS;Password=Epm!!;Data Source=AUTO&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;User Id=EPM_SYS;Password=Epm!!;Data Source=PARAMDB_KHPLXSVC1&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.OracleClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">User Id=EPM_SYS;Password=Epm!!;Data Source=AUTO</Value>
+      <Value Profile="(Default)">User Id=EPM_SYS;Password=Epm!!;Data Source=PARAMDB_KHPLXSVC1</Value>
     </Setting>
     <Setting Name="Mail" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
@@ -18,10 +18,17 @@
       <Value Profile="(Default)">Data Source=MAIL;Persist Security Info=True;User ID=autotrs;Password=autotrs;Unicode=True</Value>
     </Setting>
     <Setting Name="webSiteUrl" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">http://165.114.64.97/ePM_trialrun/download/</Value>
+      <Value Profile="(Default)">http://165.114.64.94/ePM_prod/download/reporting/</Value>
     </Setting>
     <Setting Name="websiteDir" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">C:\Users\nxp66187\Documents\AlanKuo\SVN_checkout\ePM_weekly_Scan\ePM_weekly_Scan\bin\x86\Debug\</Value>
+      <Value Profile="(Default)">D:\web_prog\ePM_prod\download\reporting\</Value>
+    </Setting>
+    <Setting Name="ACS" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;User Id=ACS_ISA;Password=autoisa;Data Source=ACS_PSK_ASSY &lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">User Id=ACS_ISA;Password=autoisa;Data Source=ACS_PSK_ASSY </Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -26,7 +26,7 @@ namespace ePM_weekly_Scan.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("User Id=EPM_SYS;Password=Epm!!;Data Source=AUTO")]
+        [global::System.Configuration.DefaultSettingValueAttribute("User Id=EPM_SYS;Password=Epm!!;Data Source=PARAMDB_KHPLXSVC1")]
         public string EPM {
             get {
                 return ((string)(this["EPM"]));
@@ -46,7 +46,7 @@ namespace ePM_weekly_Scan.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://165.114.64.94/ePM_trialrun/download/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://165.114.64.94/ePM_prod/download/reporting/")]
         public string webSiteUrl {
             get {
                 return ((string)(this["webSiteUrl"]));
@@ -55,10 +55,20 @@ namespace ePM_weekly_Scan.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("D:\\web_prog\\ePM_trial run\\download\\")]
+        [global::System.Configuration.DefaultSettingValueAttribute("D:\\web_prog\\ePM_prod\\download\\reporting\\")]
         public string websiteDir {
             get {
                 return ((string)(this["websiteDir"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("User Id=ACS_ISA;Password=autoisa;Data Source=ACS_PSK_ASSY ")]
+        public string ACS {
+            get {
+                return ((string)(this["ACS"]));
             }
         }
     }

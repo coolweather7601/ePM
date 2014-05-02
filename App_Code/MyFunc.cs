@@ -407,8 +407,8 @@ namespace EPM_Web.Alan.Common
                                         (   
                                             Select * 
                                             From week 
-                                            Where weekid > 1400
-                                                  And  weekid < 1500
+                                            Where weekid > {0}
+                                                  And  weekid < {1}
                                                   And month_id =(Select month_id From week Where :time >= start_date And :time < end_date)               
                                             Order by weekid
                                         )Where rownum <2)
