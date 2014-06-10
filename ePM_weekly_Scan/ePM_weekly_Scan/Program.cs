@@ -23,7 +23,8 @@ namespace EPM.Alan
             object[] para = new object[] { DateTime.Now, DateTime.Now }; ;
             System.Data.DataTable dateTable = ado.loadDataTable(weekStr, para, "week");
 
-            #region Is Week Base OR Is Month Base(把不是的挑出來)
+
+            #region Is Week Base OR Is Month Base(把是的挑出來)
             string checkStr = string.Format(@"Select itemid,sheetid,isweekly,startweek,frequency,ismonthly,startmonth,month_frequency
                                         From item 
                                         Where (isdelete is null or isdelete ='N') and
@@ -39,10 +40,13 @@ namespace EPM.Alan
                     int startWeekID = Convert.ToInt32(dr["StartWeek"].ToString());
                     int frequency = Convert.ToInt32(dr["frequency"].ToString());
 
-                    if ((nowWeekID - startWeekID) % frequency != 0) //if no remainder, show items
+                    if ((nowWeekID - startWeekID) % frequency == 0) //if no remainder, show items
                     {
-                        if (!queryStr.Contains(dr["sheetID"].ToString()))
-                            queryStr += string.IsNullOrEmpty(queryStr) ? dr["sheetid"].ToString() : "," + dr["sheetid"].ToString();
+                        //if (!queryStr.Contains(dr["sheetID"].ToString()))
+                            //queryStr += string.IsNullOrEmpty(queryStr) ? dr["sheetid"].ToString() : "," + dr["sheetid"].ToString();
+                        if (!string.IsNullOrEmpty(dr["sheetid"].ToString()))
+                            queryStr = string.IsNullOrEmpty(queryStr) ? string.Format(@" (sheetid='{0}' )", dr["sheetid"].ToString()) : string.Format(@"{0} Or sheetid='{1}')", queryStr.Replace(")", ""), dr["sheetid"].ToString());
+                            
                     }
                 }
                 else if (dr["IsMonthly"].ToString().Equals("Y") && dr["IsWeekly"].ToString().Equals("N"))//monthly item
@@ -61,40 +65,42 @@ namespace EPM.Alan
                                          , Convert.ToInt32(DateTime.Now.AddYears(1).Year.ToString().Substring(2, 2)) * 100);
                     object[] monthparam = new object[] { DateTime.Now, DateTime.Now, DateTime.Now, DateTime.Now };
                     System.Data.DataTable monthdt = ado.loadDataTable(monthstr, monthparam, "week");
-                    string getMonthID = monthdt.Rows.Count > 0 ? monthdt.Rows[0]["month_id"].ToString() : string.Empty;
 
                     //if no remainder, show items(check first week in this month?)
-                    if (string.IsNullOrEmpty(getMonthID))
+                    if (monthdt.Rows.Count>0)
                     {
-                        if (!queryStr.Contains(dr["sheetID"].ToString()))
-                            queryStr += string.IsNullOrEmpty(queryStr) ? dr["sheetid"].ToString() : "," + dr["sheetid"].ToString();
-                    }
-                    else
-                    {
-                        int nowMonthID = Convert.ToInt32(getMonthID);
+                        int nowMonthID = Convert.ToInt32(monthdt.Rows[0]["month_id"].ToString());
                         int startMonthID = Convert.ToInt32(dr["StartMonth"].ToString());
                         int Month_frequency = Convert.ToInt32(dr["Month_frequency"].ToString());
 
                         //if no remainder, show items(check first week in this month?)
-                        if ((nowMonthID - startMonthID) % Month_frequency != 0)
+                        if ((nowMonthID - startMonthID) % Month_frequency == 0)
                         {
-                            if (!queryStr.Contains(dr["sheetID"].ToString()))
-                                queryStr += string.IsNullOrEmpty(queryStr) ? dr["sheetid"].ToString() : "," + dr["sheetid"].ToString();
+                            //if (!queryStr.Contains("," + dr["sheetID"].ToString()))
+                            //    queryStr += string.IsNullOrEmpty(queryStr) ? dr["sheetid"].ToString() : "," + dr["sheetid"].ToString();
+                            if(!string.IsNullOrEmpty(dr["sheetid"].ToString()))
+                                queryStr = string.IsNullOrEmpty(queryStr) ? string.Format(@" (sheetid='{0}' )", dr["sheetid"].ToString()) : string.Format(@"{0} Or sheetid='{1}')", queryStr.Replace(")", ""), dr["sheetid"].ToString());
                         }
                     }
                 }
             }
-
             #endregion
 
             //log
+//            string logStr = string.Format(@"Select Tester,Location,isSealing
+//                                            From ACS_Manage
+//                                            Where Tester not in (Select machine
+//                                                                 From vw_insert_delete_log 
+//                                                                 Where weekid = :now_weekid
+//                                                                 And Log_Action ='INSERT'
+//                                                                 {0}) ", string.IsNullOrEmpty(queryStr) ? string.Empty : string.Format(@" And sheetID in ({0})", queryStr));
             string logStr = string.Format(@"Select Tester,Location,isSealing
-                              From ACS_Manage
-                              Where Tester not in (Select machine
-                                                   From vw_insert_delete_log 
-                                                   Where weekid = :now_weekid
-                                                         And Log_Action ='INSERT'
-                                                         {0}) ", string.IsNullOrEmpty(queryStr) ? string.Empty : string.Format(@" And sheetID not in ({0})", queryStr));
+                                            From ACS_Manage
+                                            Where Tester not in (Select machine
+                                                                 From vw_insert_delete_log 
+                                                                 Where weekid = :now_weekid
+                                                                 And Log_Action ='INSERT'
+                                                                 {0}) ", string.IsNullOrEmpty(queryStr) ? string.Empty : string.Format(@" And {0}", queryStr));
             para = new object[] { dateTable.Rows[0]["weekid"].ToString() };
             System.Data.DataTable logTable = new System.Data.DataTable();
             logTable = ado.loadDataTable(logStr, para, "ACS_Manage");
@@ -105,28 +111,6 @@ namespace EPM.Alan
             #region initial
             //引用Excel Application類別
             _Application myExcel = null;
-
-            //檢查PC有無Excel在執行
-            //bool flag = false;
-            //foreach (System.Diagnostics.Process item in Process.GetProcesses())
-            //{
-            //    if (item.ProcessName == "EXCEL")
-            //    {
-            //        flag = true;
-            //        break;
-            //    }
-            //}
-            //if (!flag)
-            //{
-            //    myExcel = new Microsoft.Office.Interop.Excel.Application();
-            //}
-            //else
-            //{
-            //    object obj = Marshal.GetActiveObject("Excel.Application");//引用已在執行的Excel
-            //    myExcel = obj as Microsoft.Office.Interop.Excel.Application;
-            //}
-
-            //myExcel.Visible = false;//設false效能會比較好
 
             //引用Excel Application類別
             //_Application myExcel = null;
@@ -227,32 +211,6 @@ namespace EPM.Alan
                 }
                 i++;
             }
-
-            //myRange = (Range)mySheet.get_Range(myExcel.Cells[2, 1], myExcel.Cells[2 + (i-1), 2]);
-            //myRange.Select();
-            //myRange.Columns.Cells.Interior.Color = "5296274";
-            //myRange.Columns.Cells.Borders.ColorIndex = "0";
-            //myRange.Columns.Cells.VerticalAlignment = Constants.xlCenter;
-            #endregion
-            #region sheet 2
-            ////加入新的工作表在第1張工作表之後
-            //myBook.Sheets.Add(Type.Missing, myBook.Worksheets[1], 1, Type.Missing);
-            ////引用第2個工作表
-            //mySheet = (_Worksheet)myBook.Worksheets[2];
-            ////命名工作表的名稱為 "Array"
-            //mySheet.Name = "Array";//加入新的工作表在第1張工作表之後 
-            //myBook.Sheets.Add(Type.Missing, myBook.Worksheets[1], 1, Type.Missing);
-            ////引用第2個工作表 
-            //mySheet = (_Worksheet)myBook.Worksheets[2];
-            ////命名工作表的名稱為 "Array" 
-            //mySheet.Name = "Array2";
-            ////寫入報表名稱 
-            //myExcel.Cells[1, 4] = "普通報表";
-            ////設定範圍 
-            //myRange = (Range)mySheet.get_Range(myExcel.Cells[2, 2], myExcel.Cells[4, 8]);
-            //myRange.Select();
-            ////用陣列一次寫入資料 
-            //myRange.Value2 = "'test'";
             #endregion
 
             //設定儲存路徑 
@@ -284,7 +242,7 @@ namespace EPM.Alan
                 string webUrl = ePM_weekly_Scan.Properties.Settings.Default.webSiteUrl;
                 string downloadUrl = webUrl + FileName;
 
-                sb.Insert(0, @"<p><b>Week</b></p>");
+                sb.Insert(0, string.Format(@"<p><b>Week {0}</b></p>", dateTable.Rows[0]["weekid"].ToString().Substring(1, 3)));
                 sb.Insert(0, @"<Html>
                                 <head>
                                     <style type=text/css>
@@ -318,7 +276,7 @@ namespace EPM.Alan
                                                        "C.J.hsueh@nxp.com","WB.rm@nxp.com","K.F.Fu@nxp.com",
                                                        "i.c.tsai@nxp.com","terry.tl.wu@nxp.com","c.h.chang@nxp.com","m.l.sun@nxp.com","h.c.wei@nxp.com",
                                                        "sj.chen@nxp.com","abec.ts@nxp.com","abes.ts@nxp.com","wayne.huang@nxp.com","rudy.chen@nxp.com",
-                                                       "Alan.Kuo@nxp.com"
+                                                       "Alan.Kuo@nxp.com", "t.w.lin@nxp.com"
                                                      };
 
                 foreach (string contact in contact_List)

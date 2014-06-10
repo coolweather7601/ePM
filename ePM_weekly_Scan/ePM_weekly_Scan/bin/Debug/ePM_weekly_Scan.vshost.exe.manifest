@@ -52,14 +52,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ePM_weekly_Scan.exe" size="24576">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ePM_weekly_Scan.exe" size="356864">
       <assemblyIdentity name="ePM_weekly_Scan" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>iucS7dxjTsMOt7mvCSTsgSHZXE4=</dsig:DigestValue>
+        <dsig:DigestValue>xCiDhNNPmcfc/ZA5FFDIKXTC5Qs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

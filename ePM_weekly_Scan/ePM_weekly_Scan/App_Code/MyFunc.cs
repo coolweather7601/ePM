@@ -10,7 +10,7 @@ namespace EPM.Alan.Common
     {
         public void mail(string contact, string mail_data)
         {
-            string title = "EPM";
+            string title = string.Format(@"ePM w{0} None Record Tester", getWeekCode(DateTime.Now));
             using (OracleConnection connection = new OracleConnection(ePM_weekly_Scan.Properties.Settings.Default.Mail))
             {
                 connection.Open();
@@ -37,6 +37,19 @@ namespace EPM.Alan.Common
                 }
             }
         }
+
+        public string getWeekCode(DateTime time)
+        {
+            string Conn = ePM_weekly_Scan.Properties.Settings.Default.EPM;
+            Common.AdoDbConn ado = new Common.AdoDbConn(Common.AdoDbConn.AdoDbType.Oracle, Conn);
+            string weekStr = @"select weekid from week where start_date <= :now_date And end_date >= :now_date";
+            object[] para = new object[] { DateTime.Now, DateTime.Now }; ;
+            System.Data.DataTable wtb = ado.loadDataTable(weekStr, para, "week");
+
+            return wtb.Rows[0]["weekid"].ToString().Substring(1, 3);
+        }
+
+
 
     }
 }
