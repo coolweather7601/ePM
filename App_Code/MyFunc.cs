@@ -349,14 +349,15 @@ namespace EPM_Web.Alan.Common
             string lst = "";
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                if (i > 0) { lst += ";"; }
+                if (i > 0) { lst += ","; }
                 lst += string.Format(@"{0}@nxp.com", dt.Rows[i]["mail"].ToString());
             }
-            string[] aryMail = lst.Split(';');
-            foreach (string email in aryMail)
-            {
-                mail(email, sb.ToString().Replace("\\n\\n", "<br/>"));
-            }
+            mail(lst, sb.ToString().Replace("\\n\\n", "<br/>"));
+            //string[] aryMail = lst.Split(';');
+            //foreach (string email in aryMail)
+            //{
+            //    mail(email, sb.ToString().Replace("\\n\\n", "<br/>"));
+            //}
         }
 
 
