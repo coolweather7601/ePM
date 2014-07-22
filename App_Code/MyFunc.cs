@@ -173,7 +173,13 @@ namespace EPM_Web.Alan.Common
                 }
                 else
                 {
-                    HttpContext.Current.Response.Redirect("../others/Login.aspx");
+                    String originalPath = new Uri(HttpContext.Current.Request.Url.AbsoluteUri).OriginalString;
+                    String parentDirectory = originalPath.Substring(0, originalPath.LastIndexOf("/"));
+                    if (originalPath.LastIndexOf("?") > 0)
+                    {
+                        string parameters = originalPath.Substring(originalPath.LastIndexOf("?"), originalPath.Length - originalPath.LastIndexOf("?"));
+                        HttpContext.Current.Response.Redirect("../others/Login.aspx" + parameters);
+                    }
                 }
             }
         }

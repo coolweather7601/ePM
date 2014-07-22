@@ -71,6 +71,21 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\..\..\third party dll\.net NPOI_excel\NPOI 2.0\sample\Bin\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\..\..\..\third party dll\.net NPOI_excel\NPOI 2.0\sample\Bin\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\..\..\..\third party dll\.net NPOI_excel\NPOI 2.0\sample\Bin\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\..\..\..\third party dll\.net NPOI_excel\NPOI 2.0\sample\Bin\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\..\..\..\third party dll\.net NPOI_excel\NPOI 2.0\sample\Bin\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.OracleClient" />

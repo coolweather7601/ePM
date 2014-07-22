@@ -4,14 +4,14 @@
   <description asmv2:publisher="Microsoft" asmv2:product="ePM_weekly_Scan" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" />
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="ePM_weekly_Scan.exe.manifest" size="4700">
+    <dependentAssembly dependencyType="install" codebase="ePM_weekly_Scan.exe.manifest" size="7989">
       <assemblyIdentity name="ePM_weekly_Scan.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>s4l5maye/2d686UP61XofHRJ274=</dsig:DigestValue>
+        <dsig:DigestValue>0WTYW3PwptqQkbzCdbNcP2M/Sbo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

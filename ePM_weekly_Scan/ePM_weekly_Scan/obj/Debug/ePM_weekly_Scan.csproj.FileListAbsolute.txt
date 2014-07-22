@@ -22,3 +22,10 @@ C:\Users\nxp66187\Documents\AlanKuo\program\ePM\ePM_weekly_Scan\ePM_weekly_Scan\
 C:\Users\nxp66187\Documents\AlanKuo\program\ePM\ePM_weekly_Scan\ePM_weekly_Scan\obj\Debug\ePM_weekly_Scan.csproj.ResolveComReference.cache
 C:\Users\nxp66187\Documents\AlanKuo\program\ePM\ePM_weekly_Scan\ePM_weekly_Scan\obj\Debug\ePM_weekly_Scan.exe.manifest
 C:\Users\nxp66187\Documents\AlanKuo\program\ePM\ePM_weekly_Scan\ePM_weekly_Scan\obj\Debug\ePM_weekly_Scan.application
+C:\Users\nxp66187\Documents\AlanKuo\program\ePM\ePM_weekly_Scan\ePM_weekly_Scan\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\nxp66187\Documents\AlanKuo\program\ePM\ePM_weekly_Scan\ePM_weekly_Scan\bin\Debug\NPOI.dll
+C:\Users\nxp66187\Documents\AlanKuo\program\ePM\ePM_weekly_Scan\ePM_weekly_Scan\bin\Debug\NPOI.OOXML.dll
+C:\Users\nxp66187\Documents\AlanKuo\program\ePM\ePM_weekly_Scan\ePM_weekly_Scan\bin\Debug\NPOI.OpenXml4Net.dll
+C:\Users\nxp66187\Documents\AlanKuo\program\ePM\ePM_weekly_Scan\ePM_weekly_Scan\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\Users\nxp66187\Documents\AlanKuo\program\ePM\ePM_weekly_Scan\ePM_weekly_Scan\bin\Debug\NPOI.xml
+C:\Users\nxp66187\Documents\AlanKuo\program\ePM\ePM_weekly_Scan\ePM_weekly_Scan\obj\Debug\ePM_weekly_Scan.csprojResolveAssemblyReference.cache

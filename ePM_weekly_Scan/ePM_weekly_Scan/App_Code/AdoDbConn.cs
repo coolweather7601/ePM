@@ -98,10 +98,10 @@ namespace EPM.Alan.Common
                             if (blnDbConnRegisted) { dbfc = GetProviderFactory("System.Data.SQLite", null, null); }
                             else { dbfc = GetProviderFactory(null, "System.Data.SQLite", "System.Data.SQLite.SQLiteFactory"); }
                         } break;
-                    case AdoDbType.Oracle: 
+                    case AdoDbType.Oracle:
                         {
                             dbfc = GetProviderFactory("System.Data.OracleClient", null, null);
-                            theReg = new Regex(@"([:][a-z|A-Z|u4e00-u9fa5]+)"); 
+                            theReg = new Regex(@"([:][a-z|A-Z|u4e00-u9fa5]+)");
                         } break;
                     default: break;
                 }
@@ -138,9 +138,9 @@ namespace EPM.Alan.Common
             object re = null;
 
             try
-            {                
+            {
                 dbCmd.Parameters.Clear();
-                
+
                 //Regex theReg = new Regex(@"([:][a-z|A-Z|u4e00-u9fa5]+)");//oracle 
                 //Regex theReg = new Regex(@"([@][a-z|A-Z|u4e00-u9fa5]+)");//mssql 
 
@@ -190,7 +190,7 @@ namespace EPM.Alan.Common
                 }
             }
             catch (Exception ex)
-            { string err = ex.Message;}
+            { string err = ex.Message; }
             finally
             { if (dbCmd != null && dbCmd.Connection != null) dbCmd.Connection.Close(); }
             return re;
@@ -204,7 +204,7 @@ namespace EPM.Alan.Common
         { accessDataTable(AdoDbAction.ExecuteNonQuery, strSql, sqlParams, null); }
         public int insertAndGetIdentity(string strSql, object[] sqlParams)
         { return (int)accessDataTable(AdoDbAction.InsertExecuteReader, strSql, sqlParams, null); }
-        public string SQL_transaction(List<string> arrStr,string Conn) 
+        public string SQL_transaction(List<string> arrStr, string Conn)
         {
             string reStr = "SUCCESS";
             using (OracleConnection connection = new OracleConnection(Conn))
@@ -217,7 +217,7 @@ namespace EPM.Alan.Common
                 // Start a local transaction
                 transaction = connection.BeginTransaction(IsolationLevel.ReadCommitted);
                 // Assign transaction object for a pending local transaction
-                                          command.Transaction = transaction;
+                command.Transaction = transaction;
 
                 try
                 {

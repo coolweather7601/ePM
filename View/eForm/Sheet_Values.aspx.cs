@@ -131,7 +131,7 @@ namespace EPM_Web.Alan
 
                 if (WeeklyOrMonthly)
                 {
-                    txtOperator.Text = Session["account"].ToString();
+                    txtOperator.Text = Session["account"] != null ? Session["account"].ToString() : "";
                     txtMachine.Text = dr["machine"].ToString();
                     txtLocation.Text = dr["location"].ToString();
                     txtWeek.Text = dr["weekid"].ToString();
@@ -557,10 +557,10 @@ namespace EPM_Web.Alan
                         sb_mail.Append(string.Format(@"<tr><td class=DataTD_Green>週別(Week Code)</td> <td class=DataTD>{0}</td></tr>", txtWeek.Text.Trim().ToUpper()));
                         sb_mail.Append(string.Format(@"<tr><td class=DataTD_Green>操作人員(Operator)</td> <td class=DataTD>{0}</td></tr>", txtOperator.Text.Trim().ToUpper()));
                         sb_mail.Append("</table>");
-                        sb_mail.Append("<br />");
+                        sb_mail.Append("<br /><p>");
 
                         sb_mail.Append(sb_Abnormal.ToString());
-                        sb_mail.Append("<br />");
+                        sb_mail.Append("</p><br />");
 
                         sb_mail.Append("<hr />");
                         sb_mail.Append("<p>******************ePM Mail Agent [ePM.mail.agent@tw-khh01.nxp.com]*******************</p>");
